@@ -8,6 +8,8 @@ const postRoute = require('./routes/post-route')
 const authenticate = require('./middlewares/authenticate')
 const commentRoute = require('./routes/comment-route')
 const likeRoute = require('./routes/like-route')
+const uploadRoute = require("./routes/ีupload-route");
+
 
 
 const app = express()
@@ -23,6 +25,10 @@ app.use('/auth', authRoute)
 app.use('/post', authenticate, postRoute)
 app.use('/comment', authenticate, commentRoute)
 app.use('/like',authenticate, likeRoute)
+
+app.use("/api", uploadRoute);
+
+
 
 
 
