@@ -16,7 +16,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/test', (req, res) => {
-    res.json({ msg: "Service is running" });
+    res.json({ msg: "Service is running , ok" });
   });
 
 app.use('/auth', authRoute)
