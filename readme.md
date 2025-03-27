@@ -1,8 +1,8 @@
-CC18 Fakebook api
+CWR Facebook api
 ---
 ### env guide
-PORT=8899
-DATABASE="mysql://u:pw@localhost:3306/cc18_fakebook"
+PORT=88900
+DATABASE="mysql://root:1111@localhost:3306/cwr_facebook"
 JWT_SECRET
 
 CLOUDINARY_NAME
