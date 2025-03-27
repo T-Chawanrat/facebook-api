@@ -15,10 +15,16 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+app.get('/test', (req, res) => {
+    res.json({ msg: "Service is running" });
+  });
+
 app.use('/auth', authRoute)
 app.use('/post', authenticate, postRoute)
 app.use('/comment', authenticate, commentRoute)
 app.use('/like',authenticate, likeRoute)
+
+
 
 app.use(notFound)
 app.use(errorMiddleware)
